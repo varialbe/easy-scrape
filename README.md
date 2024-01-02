@@ -30,15 +30,33 @@ pip install requests
    cd EasyScrape
    ```
 
-## Usage
+## Usage Instructions for EasyScrape
 
 ### Running the Script
-1. **Open your browser:** Launch your preferred web browser.
-2. **Navigate to the Roblox inventory page:** Go to the specific page on Roblox where the decals are listed.
-3. **Open Developer Tools:** Right-click on the page and select "Inspect" or use the shortcut `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac).
-4. **Console Tab:** Go to the "Console" tab in the developer tools.
-5. **Execute the Script:** Copy and paste the EasyScrape script into the console and press Enter.
+1. **Open Your Browser:** Launch your preferred web browser.
 
+2. **Navigate to the Desired User's Inventory:** Visit the Roblox website and navigate to the inventory section of the user whose decals you want to download.
+
+3. **Copy the URL:** Once you're in the specific inventory section displaying the decals, copy the URL from the browser's address bar.
+
+4. **Prepare the Script:** Open the EasyScrape script in a text editor. At the bottom of the script, you'll find a placeholder to insert the URL. Replace it with the URL you just copied.
+
+    ```python
+    # Example of the placeholder in the script
+    inventory_url = 'PASTE_THE_COPIED_URL_HERE'
+    ```
+
+5. **Run the Script:** Execute the script in your Python environment. You can do this typically by running a command like `python EasyScrape.py` in your command line or terminal, assuming `EasyScrape.py` is the name of the script.
+
+6. **Wait for Downloads to Complete:** The script will create a new folder named `images` in the same directory where the script is located. It will then begin downloading all the decals from the specified user's inventory into this folder. Ensure that the script runs until all images are downloaded.
+
+### Important Notes:
+- The script will only download decals visible on the page of the provided URL. Make sure you are on the correct page showing the decals you want to download.
+- Ensure that your Python environment has the necessary permissions to create directories and save files.
+- The download time will vary depending on the number of decals and your internet speed.
+- Running the script multiple times for the same URL will result in repeated downloads unless the script is modified to check for existing files.
+
+If you encounter any issues or errors during the process, make sure to check the script for any typos in the URL and verify that your Python environment is correctly set up with all necessary dependencies installed.
 ### Downloading Decals
 Once the script is executed, it will automatically start scraping and downloading the decals. Files will be saved to your default download directory.
 
